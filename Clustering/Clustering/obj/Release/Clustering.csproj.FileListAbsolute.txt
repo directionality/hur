@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\bin\Release\Clustering.exe.config
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\bin\Release\Clustering.exe
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\bin\Release\Clustering.pdb
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\obj\Release\Clustering.exe
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\obj\Release\Clustering.pdb
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\obj\Release\Clustering.csprojResolveAssemblyReference.cache

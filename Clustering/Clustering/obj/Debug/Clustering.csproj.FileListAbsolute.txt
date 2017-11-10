@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\obj\Debug\Clustering.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\bin\Debug\Clustering.exe.config
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\bin\Debug\Clustering.exe
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\bin\Debug\Clustering.pdb
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\obj\Debug\Clustering.exe
+C:\Users\User\Desktop\HurricaneProject\Clustering\Clustering\obj\Debug\Clustering.pdb
