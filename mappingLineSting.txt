@@ -1,0 +1,19 @@
+{
+  "mappings": {
+    "linestringmodel": {
+      "properties": 
+	{		
+		"name": {
+			"type": "string"
+		},
+		
+        	"location": {
+          		"type": "geo_shape"
+        	},
+		"timestamp": {
+		          "type": "date"
+	        }
+      	}
+    }
+  }
+}

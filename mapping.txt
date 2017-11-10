@@ -1,0 +1,116 @@
+{
+  "mappings": {
+    "hurdatdatamodel": {
+      "properties": {
+		"basin": {
+			"type": "string"
+		},
+		"bearing_to_point": {
+			"type": "double"
+		},
+		"cyclone_number": {
+			"type": "long"
+		},
+		"data_row_day": {
+			"type": "long"
+		},
+		"data_row_hours": {
+			"type": "long"
+		},
+		"data_row_minutes": {
+			"type": "long"
+		},
+		"data_row_month": {
+			"type": "long"
+		},
+		"data_row_year": {
+			"type": "long"
+		},
+		"distance": {
+			"type": "double"
+		},
+		"lat": {
+			"type": "double"
+		},
+		"lat_hemisphere": {
+			"type": "string"
+		},
+		"lon": {
+			"type": "double"
+		},
+		"long_hemisphere": {
+			"type": "string"
+		},
+		"max_ne_34_kt": {
+			"type": "long"
+		},
+		"max_ne_50_kt": {
+			"type": "long"
+		},
+		"max_ne_64_kt": {
+			"type": "long"
+		},
+		"max_nw_34_kt": {
+			"type": "long"
+		},
+		"max_nw_50_kt": {
+			"type": "long"
+		},
+		"max_nw_64_kt": {
+			"type": "long"
+		},
+		"max_se_34_kt": {
+			"type": "long"
+		},
+		"max_se_50_kt": {
+			"type": "long"
+		},
+		"max_se_64_kt": {
+			"type": "long"
+		},
+		"max_sustained_wind": {
+			"type": "long"
+		},
+		"max_sw_34_kt": {
+			"type": "long"
+		},
+		"max_sw_50_kt": {
+			"type": "long"
+		},
+		"max_sw_64_kt": {
+			"type": "long"
+		},
+		"min_pressure": {
+			"type": "long"
+		},
+		"name": {
+			"type": "string"
+		},
+		"norm_star_value": {
+			"type": "integer"
+		},
+		"record_identifier": {
+			"type": "string"
+		},
+		"star_calculus_value": {
+			"type": "integer"
+		},
+		"system_status": {
+			"type": "string"
+		},
+		"total_track_entries": {
+			"type": "long"
+		},
+		"year": {
+			"type": "long"
+		},
+        "location": {
+          "type": "geo_point"
+        },
+		"timestamp": {
+          "type": "date"
+        }
+      }
+    }
+  }
+}
