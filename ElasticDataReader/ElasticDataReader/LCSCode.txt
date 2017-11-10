@@ -1,0 +1,272 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.FileIO;
+ 
+namespace LCSI
+{
+    class Program
+    {
+        public static void Main(String[] args)
+        {
+            //String A = "ACBDEA";
+            //String B = "ABCDA";
+            //int[] Aint = { 12, 17, 15, 11, 6, 1, 2, 5, 5, 7, 11, 10, 12, 12, 15, 15, 17, -17, -18, 17, 17, 16, 13, 9, 6, 4, 4, 7, 9, 9, 9, 8, 14, 9, -1, 9, -16, 3, 3, 8, -11, -8, 9, -10, 9, -3, -9, -1, 3, -8, 1 };
+            //int[] Bint = { 11, 11, 10, 9, 7, 4, 4, 3, 3, 4, 4, 3, 4, 1, -3, -3, 1, 5, 10, 16, 17, -18, 14, 9, 0, -2, -3, -2, -1, -1, -1, 0, 0, 0, 1, 1, 1, 2, 3, 4, 6, 8, 10, 11, 10, 10, 10, 8, 10, 10, 8, 8, 9, 8, 6, 8, 9, -18, 14, -9 };
+ 
+ 
+ 
+            //int tempResult = findInt(Aint, Bint);
+            //UNNAMED_01_1851,0,-1,0,1,-1,0,0,2,4,7,9,9,10,16,
+ 
+            List<SortedSet<string>> resultSet = new List<SortedSet<string>>();
+ 
+            using (TextFieldParser parser = new TextFieldParser(@"c:\sequences\sequences.txt"))
+            {
+                parser.TextFieldType = Microsoft.VisualBasic.FileIO.FieldType.Delimited;
+                parser.SetDelimiters(",");
+ 
+                Dictionary<string, int[]> sequenceDict = new Dictionary<string, int[]>();
+                
+                while (!parser.EndOfData)
+                {
+                    //Process row
+                    string[] fields = parser.ReadFields();
+                    string name = fields[0];
+                    int length = fields.Length-1;
+                    int[] tempInt = new int[length];
+                    for (int i = 1; i < length; i++)
+                    {
+                        tempInt[i-1] = Int32.Parse(fields[i]);
+                    }
+                    sequenceDict.Add(name, tempInt);
+                }
+ 
+                //Dictionary<string,List<string>> resultDict = new Dictionary<string, List<string>>();
+                int[,] matchMatrix = new int[1024, 1024];
+ 
+                for (int i = 0; i < sequenceDict.Keys.Count; i++)
+                {
+                    SortedSet<string> newSet = new SortedSet<string>();
+                    string nameA = sequenceDict.Keys.ElementAt(i);
+ 
+                    int[] intA = sequenceDict[sequenceDict.Keys.ElementAt(i)];
+ 
+                    for (int j = 0; j < sequenceDict.Keys.Count; j++)
+                    {
+                        if (i != j)
+                        {
+                            string nameB = sequenceDict.Keys.ElementAt(j);
+                    
+                            int[] intB = sequenceDict[sequenceDict.Keys.ElementAt(j)];
+ 
+                            int result = findInt(intA, intB);
+ 
+                            if (result > 15)
+                            {
+                                if (resultSet.Count == 0)
+                                {
+                                    newSet.Add(nameA);
+                                    resultSet.Add(newSet);
+                                }
+ 
+                                bool nameAExists = false;
+ 
+                                //if (nameA == "ABLE_02_1952" || nameB == "ABLE_02_1952")
+                                {
+                                   // bool stop = true;
+                                }                              
+                                for (int m=0; m < resultSet.Count; m++)
+                                {                                     
+                                    if (resultSet.ElementAt(m).Contains(nameA))
+                                    {
+                                        nameAExists = true;
+                                        resultSet.ElementAt(m).Add(nameB);
+                                    }                                    
+                                }
+                                if (!nameAExists)
+                                {  
+                                    newSet.Add(nameA);
+                                    newSet.Add(nameB);
+                                    resultSet.Add(newSet);                                 
+                                }
+                                //matchList.Add(nameB);
+                                int resultSetCount = resultSet.Count;
+                            }
+                        }
+                    }
+                    int resultCount = resultSet.Count;             
+                }
+            }
+            
+            //Console.WriteLine("LCS :" + find(A.ToCharArray(), B.ToCharArray()));
+            //Console.WriteLine("LCS :" + findInt(Aint, Bint));
+            Console.ReadLine();
+        }
+ 
+        public static int findInt(int[] Aint, int[] Bint)
+        {
+            int[,] LCS = new int[Aint.Length + 1, Bint.Length + 1];
+            String[,] solution = new String[Aint.Length + 1, Bint.Length + 1];
+ 
+            // if A is null then LCS of A, B =0
+            for (int i = 0; i <= Bint.Length; i++)
+            {
+                LCS[0, i] = 0;
+                solution[0, i] = "0";
+            }
+ 
+            // if B is null then LCS of A, B =0
+            for (int i = 0; i <= Aint.Length; i++)
+            {
+                LCS[i, 0] = 0;
+                solution[i, 0] = "0";
+            }
+ 
+            for (int i = 1; i <= Aint.Length; i++)
+            {
+                for (int j = 1; j <= Bint.Length; j++)
+                {
+                    if (Aint[i - 1] == Bint[j - 1])
+                    {
+                        LCS[i, j] = LCS[i - 1, j - 1] + 1;
+                        solution[i, j] = "diagonal";
+                    }
+                    else
+                    {
+                        LCS[i, j] = Math.Max(LCS[i - 1, j], LCS[i, j - 1]);
+                        if (LCS[i, j] == LCS[i - 1, j])
+                        {
+                            solution[i, j] = "top";
+                        }
+                        else
+                        {
+                            solution[i, j] = "left";
+                        }
+                    }
+                }
+            }
+ 
+            // below code is to just print the result
+            String x = solution[Aint.Length, Bint.Length];
+            String answer = "0";
+            int a = Aint.Length;
+            int b = Bint.Length;
+            while (x != "0")
+            {
+                if (solution[a, b] == "diagonal")
+                {
+                    
+                    answer = Aint[a - 1].ToString()+ "," + answer;
+                    a--;
+                    b--;
+                }
+                else if (solution[a, b] == "left")
+                {
+                    b--;
+                }
+                else if (solution[a, b] == "top")
+                {
+                    a--;
+                }
+                x = solution[a, b];
+            }
+            //Console.WriteLine(answer);
+ 
+            for (int i = 0; i <= Aint.Length; i++)
+            {
+                for (int j = 0; j <= Bint.Length; j++)
+                {
+                    //Console.WriteLine(" " + LCS[i, j]);
+                }
+                //Console.WriteLine();
+            }
+            return LCS[Aint.Length, Bint.Length];
+        }
+ 
+        public static int find(char[] A, char[] B)
+        {
+            int int1 = B.Length;
+            int[,] LCS = new int[A.Length + 1, int1+1];
+            String[,] solution = new String[A.Length + 1,B.Length + 1];
+            // if A is null then LCS of A, B =0
+            for (int i = 0; i <= B.Length; i++)
+            {
+                LCS[0,i] = 0;
+                solution[0, i] = "0";
+            }
+ 
+            // if B is null then LCS of A, B =0
+            for (int i = 0; i <= A.Length; i++)
+            {
+                LCS[i,0] = 0;
+                solution[i,0] = "0";
+            }
+ 
+            for (int i = 1; i <= A.Length; i++)
+            {
+                for (int j = 1; j <= B.Length; j++)
+                {
+                    if (A[i - 1] == B[j - 1])
+                    {
+                        LCS[i,j] = LCS[i - 1,j - 1] + 1;
+                        solution[i,j] = "diagonal";
+                    }
+                    else
+                    {
+                        LCS[i,j] = Math.Max(LCS[i - 1,j], LCS[i,j - 1]);
+                        if (LCS[i,j] == LCS[i - 1,j])
+                        {
+                            solution[i,j] = "top";
+                        }
+                        else
+                        {
+                            solution[i,j] = "left";
+                        }
+                    }
+                }
+            }
+            // below code is to just print the result
+            String x = solution[A.Length,B.Length];
+            String answer = "";
+            
+            int a = A.Length;
+            int b = B.Length;
+            while (x != "0")
+            {
+                if (solution[a,b] == "diagonal")
+                {
+                    answer = A[a - 1] + answer;
+                    a--;
+                    b--;
+                }
+                else if (solution[a,b] == "left")
+                {
+                    b--;
+                }
+                else if (solution[a,b] == "top")
+                {
+                    a--;
+                }
+                x = solution[a,b];
+            }
+            Console.WriteLine(answer);
+ 
+            for (int i = 0; i <= A.Length; i++)
+            {
+                for (int j = 0; j <= B.Length; j++)
+                {
+                    Console.WriteLine(" " + LCS[i,j]);
+                }
+                Console.WriteLine();
+            }
+            return LCS[A.Length,B.Length];
+        }
+ 
+        
+    }
+}
+ 

@@ -1,0 +1,31 @@
+c:\users\user\documents\visual studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\ElasticDataReader.exe.config
+c:\users\user\documents\visual studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\ElasticDataReader.exe
+c:\users\user\documents\visual studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\ElasticDataReader.pdb
+c:\users\user\documents\visual studio 2017\Projects\ElasticDataReader\ElasticDataReader\obj\Debug\ElasticDataReader.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2017\Projects\ElasticDataReader\ElasticDataReader\obj\Debug\ElasticDataReader.exe
+c:\users\user\documents\visual studio 2017\Projects\ElasticDataReader\ElasticDataReader\obj\Debug\ElasticDataReader.pdb
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\ElasticDataReader.exe.config
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\ElasticDataReader.exe
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\ElasticDataReader.pdb
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\obj\Debug\ElasticDataReader.csprojResolveAssemblyReference.cache
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\obj\Debug\ElasticDataReader.csproj.CoreCompileInputs.cache
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\obj\Debug\ElasticDataReader.exe
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\obj\Debug\ElasticDataReader.pdb
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\Elasticsearch.Net.dll
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\Nest.dll
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\Elasticsearch.Net.xml
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\Nest.xml
+C:\Users\Bridget\Documents\Visual Studio 2017\Projects\ElasticDataReader\ElasticDataReader\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\bin\Debug\ElasticDataReader.exe.config
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\bin\Debug\ElasticDataReader.exe
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\bin\Debug\ElasticDataReader.pdb
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\bin\Debug\Elasticsearch.Net.dll
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\bin\Debug\Nest.dll
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\bin\Debug\Elasticsearch.Net.xml
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\bin\Debug\Nest.xml
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\obj\Debug\ElasticDataReader.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\obj\Debug\ElasticDataReader.exe
+C:\Users\User\Desktop\HurricaneProject\ElasticDataReader\ElasticDataReader\obj\Debug\ElasticDataReader.pdb
